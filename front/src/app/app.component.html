@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Stockify</h1>
+  <section>
+    <h2>Search</h2>
+    <div>
+
+      <input [(ngModel)]="query" type="text" name="search" id="search" placeholder="NASDAQ" />
+      <button (click)="search()">Rechercher</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resultat</h2>
+    <ul>
+      <li>Prix d'ouverture: {{ response.today.opening }}$ </li>
+      <li>Le plus haut: {{ response.today.highest }}$ </li>
+      <li>Le plus back: {{ response.today.lowest }}$ </li>
+      <li>Volume: {{ response.today.volume }}$ </li>
+    </ul>
+  </section>
+
+</div>
